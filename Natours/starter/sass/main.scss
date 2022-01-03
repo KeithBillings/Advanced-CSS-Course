@@ -1,9 +1,13 @@
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-$color-grey-dark: #777;
-$color-white: #fff;
-$color-black: #000;
+@import url(./abstracts/_functions.scss);
+@import url(./abstracts/_mixins.scss);
+@import url(./abstracts/_variables.scss);
+
+@import url(./base/_base.scss);
+@import url(./base/_animations.scss);
+@import url(./base/_typography.scss);
+@import url(./base/_utilities.scss);
+
+@import url(./pages/_home.scss);
 
 /* Resets */
 *,
