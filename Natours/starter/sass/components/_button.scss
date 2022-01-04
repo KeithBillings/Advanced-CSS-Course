@@ -1,0 +1,57 @@
+.btn {
+	&:link,
+	&:visited {
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 1.5rem 4rem;
+		display: inline-block;
+		border-radius: 10rem;
+		transition: all 0.2s;
+		position: relative;
+		font-size: 1.4rem;
+	}
+
+	&:hover {
+		transform: translateY(-0.3rem);
+		box-shadow: 0rem 1rem 2rem rgba($color-black, 0.2);
+
+		&::after {
+			transform: scale(2);
+			opacity: 0;
+		}
+	}
+
+	&:active {
+		transform: translateY(-0.1rem);
+		box-shadow: 0rem 0.5rem 1rem rgba($color-black, 0.2);
+	}
+
+	&--white {
+		background-color: $color-white;
+		color: $color-grey-dark;
+
+		&::after {
+			background-color: $color-white;
+		}
+	}
+
+	&::after {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		border-radius: 10rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: all 0.6s;
+	}
+
+	&--animated {
+		-webkit-animation: moveInBottom 1.5s ease-out 0.75s;
+		animation: moveInBottom 1.5s ease-out 0.75s;
+		-webkit-animation-fill-mode: backwards;
+		animation-fill-mode: backwards;
+	}
+}

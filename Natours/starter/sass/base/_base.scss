@@ -1,0 +1,21 @@
+/* Resets */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	// This defines what 1rem is
+	font-size: 62.5%;
+	/* This is proper technique to adjust the size of all things on the page. */
+	/* We don't want to use pixels here either because then it will overwrite the default size of the browser. */
+	/* People with visual impairments will change the default font size of their browser and we dont want to disable that. */
+	/* Using % allows the user to continue to increase their own font size, but then also automatically "zooms" in the page for them. */
+}
+
+body {
+	box-sizing: border-box; /* this lives here instead of on the * selector so we use the power of inheritance */
+}
